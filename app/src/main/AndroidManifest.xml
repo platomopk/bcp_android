@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ttb.bcp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/bahrialogo"
+        android:label="BCP"
+        tools:replace="android:label"
+        android:largeHeap="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.ttb.bcp.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ttb.bcp.login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.notifications"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.description"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.ttb.bcp.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.ttb.bcp.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.ttb.bcp.createservant"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.updateservant"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.servants"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.createcar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.updatecar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.cars"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.createcomplaint"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.complaints"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.complaintdesc"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.services"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.servicesdesc"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.feedbackservice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.createservice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.carpool"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.ttb.bcp.NotificationReciever">
+            <intent-filter>
+                <action android:name="com.ttb.bcp.YES" />
+                <action android:name="com.ttb.bcp.NO" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ttb.bcp.security"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.genericcomplaints"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.complaintdescgeneric"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.creategeneralobs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ttb.bcp.createcommercialobs"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ttb.bcp.paybills" />
+        <activity android:name="com.ttb.bcp.paymentmodule" />
+        <activity android:name="com.ttb.bcp.easypaisa" />
+        <activity android:name="com.ttb.bcp.jazzcash" />
+        <activity android:name="com.ttb.bcp.card"></activity>
+    </application>
+
+</manifest>
